@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/arm64-v8a",
+  "command": "/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dcpp_code_EXPORTS -I../../../../../cpp-code/src/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11 -o CMakeFiles/cpp-code.dir/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/cpp-code/src/src/example.cpp.o -c /Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/cpp-code/src/src/example.cpp",
+  "file": "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/cpp-code/src/src/example.cpp"
+},
+
+{
+  "directory": "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/arm64-v8a",
+  "command": "/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/abhishekkumar/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dcpp_code_EXPORTS -I../../../../../cpp-code/src/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -std=gnu++11 -o CMakeFiles/cpp-code.dir/cpp-adapter.cpp.o -c /Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/cpp-adapter.cpp",
+  "file": "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/cpp-adapter.cpp"
+}
+]

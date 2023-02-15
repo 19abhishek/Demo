@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/armeabi-v7a'
+ninja: no work to do.

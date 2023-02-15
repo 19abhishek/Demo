@@ -1,0 +1,40 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/abhishekkumar/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/abhishekkumar/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cpp-code-Debug-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekkumar/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/arm64-v8a",
+        "cpp-code"
+      ],
+      "buildType": "debug",
+      "abi": "arm64-v8a",
+      "artifactName": "cpp-code",
+      "output": "/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/build/intermediates/cxx/Debug/2i451k2b/obj/arm64-v8a/libcpp-code.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

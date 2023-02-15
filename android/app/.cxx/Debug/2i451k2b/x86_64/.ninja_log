@@ -1,0 +1,10 @@
+# ninja log v5
+0	65	1676374641	CMakeFiles/cpp-code.dir/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/cpp-code/src/src/example.cpp.o	c3f058dcb3026297
+0	353	1676374641	CMakeFiles/cpp-code.dir/cpp-adapter.cpp.o	1c44cf2431cbeb05
+353	412	1676374641	../../../../build/intermediates/cxx/Debug/2i451k2b/obj/x86_64/libcpp-code.so	c8487f6896632eb7
+1	353	1676375573	CMakeFiles/cpp-code.dir/cpp-adapter.cpp.o	1c44cf2431cbeb05
+353	427	1676375573	../../../../build/intermediates/cxx/Debug/2i451k2b/obj/x86_64/libcpp-code.so	c8487f6896632eb7
+1	342	1676375617	CMakeFiles/cpp-code.dir/cpp-adapter.cpp.o	1c44cf2431cbeb05
+342	415	1676375617	../../../../build/intermediates/cxx/Debug/2i451k2b/obj/x86_64/libcpp-code.so	c8487f6896632eb7
+1	351	1676379556	CMakeFiles/cpp-code.dir/cpp-adapter.cpp.o	1c44cf2431cbeb05
+351	454	1676379556	../../../../build/intermediates/cxx/Debug/2i451k2b/obj/x86_64/libcpp-code.so	c8487f6896632eb7

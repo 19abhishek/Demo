@@ -1,0 +1,3 @@
+/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/armeabi-v7a/CMakeFiles/cpp-code.dir

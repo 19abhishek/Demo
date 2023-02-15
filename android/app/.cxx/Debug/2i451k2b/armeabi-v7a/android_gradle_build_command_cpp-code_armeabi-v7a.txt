@@ -1,0 +1,7 @@
+Executable : /Users/abhishekkumar/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/abhishekkumar/Documents/Gullak/RN68/MyApp/android/app/.cxx/Debug/2i451k2b/armeabi-v7a
+cpp-code
+jvmArgs : 
+
