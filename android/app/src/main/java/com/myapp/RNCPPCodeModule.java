@@ -48,5 +48,41 @@ public final class RNCPPCodeModule
     promise.resolve(response);
   }
 
+  @ReactMethod
+  public void xorString(final String a, final String b, final Promise promise) {
+    String result = xorString(a, b);
+
+    final WritableMap response = Arguments.createMap();
+
+    response.putString("result", String.valueOf(result));
+
+    promise.resolve(response);
+  }
+
+//   @ReactMethod
+//   public void sha256(final String a, final Promise promise) {
+//     String result = sha256(a);
+
+//     final WritableMap response = Arguments.createMap();
+
+//     response.putString("result", String.valueOf(result));
+
+//     promise.resolve(response);
+//   }
+
+  @ReactMethod
+  public void sha512(final String a, final Promise promise) {
+    String result = sha512(a);
+
+    final WritableMap response = Arguments.createMap();
+
+    response.putString("result", String.valueOf(result));
+
+    promise.resolve(response);
+  }
+
   public static native long multiply(long a, long b);
+  public static native String xorString(String a, String b);
+//   public static native String sha256(String a);
+  public static native String sha512(String a);
 }

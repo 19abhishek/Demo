@@ -77,7 +77,18 @@ const App = () => {
 
   const mul = async () => {
     const val = await RNCPPCode.multiply(3,8);
-    console.log('Val', val);
+    const res = await RNCPPCode.xorString('Abhishek', 'Kumar');
+    // const shaVal = await RNCPPCode.sha256('Abhishek');
+    const shaVal5 = await RNCPPCode.sha512('Abhishek');
+    const value = res.result;
+
+    console.log('Sha', JSON.stringify(shaVal5.result).length);
+    
+    for(let val of value){
+      console.log('i', JSON.stringify(val));
+    }
+    // console.log('Val', val, 'res', value);
+    // for(const each of value) console.log(JSON.stringify(each));
   }
 
   mul();
