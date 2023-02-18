@@ -8,8 +8,9 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -29,16 +30,18 @@ import {
 
 const {NativeModules} = require('react-native');
 
-const RNCPPCode = NativeModules.RNCPPCode;
+// const RNCPPCode = NativeModules.RNCPPCode;
 
-if (!RNCPPCode) {
-  throw new Error(`[RNCPPCode]: NativeModule: RNCPPCode is null.
-To fix this issue try these steps:
-  • Rebuild and restart the app.
-  • Run the packager with \`--clearCache\` flag.
-  • Run \`pod install\` in the \`ios\` directory and then rebuild and re-run the app.
-`);
-}
+const {CalendarModule} = NativeModules;
+
+// if (!RNCPPCode) {
+//   throw new Error(`[RNCPPCode]: NativeModule: RNCPPCode is null.
+// To fix this issue try these steps:
+//   • Rebuild and restart the app.
+//   • Run the packager with \`--clearCache\` flag.
+//   • Run \`pod install\` in the \`ios\` directory and then rebuild and re-run the app.
+// `);
+// }
 
 const Section: React.FC<{
   title: string;
@@ -71,27 +74,53 @@ const Section: React.FC<{
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const [xorVal, setXorVal] = useState('');
+  const [shaVal, setShaVal] = useState('');
+  const [multiply, setMultiply] = useState('');
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  const onPress = async () => {
+    const eid = await CalendarModule.createCalendarEvent('testName', 'testLocation');
+    console.log('eval', eid);
+  };
 
   const mul = async () => {
-    const val = await RNCPPCode.multiply(3,8);
-    const res = await RNCPPCode.xorString('Abhishek', 'Kumar');
-    // const shaVal = await RNCPPCode.sha256('Abhishek');
-    const shaVal5 = await RNCPPCode.sha512('Abhishek');
-    const value = res.result;
-
-    console.log('Sha', JSON.stringify(shaVal5.result).length);
-    
-    for(let val of value){
-      console.log('i', JSON.stringify(val));
-    }
-    // console.log('Val', val, 'res', value);
-    // for(const each of value) console.log(JSON.stringify(each));
+    console.log('Inside multiply');
+    const ans = await CalendarModule.multiply(5,6);
+    setMultiply(ans);
+    console.log('ans', ans);
   }
 
-  mul();
+  const getXor = async () => {
+    const ans = await CalendarModule.xor('hello', 'world');
+    setXorVal(ans);
+    console.log('Xor', ans);
+  }
+
+  const getSha = async () => {
+    const ans = await CalendarModule.sha512('hello');
+    setShaVal(ans);
+    console.log('Sha', ans);
+  }
+  // const mul = async () => {
+  //   const val = await RNCPPCode.multiply(3,8);
+  //   const res = await RNCPPCode.xorString('Abhishek', 'Kumar');
+  //   // const shaVal = await RNCPPCode.sha256('Abhishek');
+  //   const shaVal5 = await RNCPPCode.sha512('Abhishek');
+  //   const value = res.result;
+
+  //   console.log('Sha', JSON.stringify(shaVal5.result).length);
+    
+  //   for(let val of value){
+  //     console.log('i', JSON.stringify(val));
+  //   }
+  //   // console.log('Val', val, 'res', value);
+  //   // for(const each of value) console.log(JSON.stringify(each));
+  // }
+
+  // mul();
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -99,6 +128,26 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Button
+      title="Click to invoke your native module!"
+      color="#841584"
+      onPress={onPress}
+    />
+        <Button
+      title="Multiply"
+      color="#841584"
+      onPress={mul}
+    />
+        <Button
+      title="XOR"
+      color="#841584"
+      onPress={getXor}
+    />
+        <Button
+      title="Sha"
+      color="#841584"
+      onPress={getSha}
+    />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
@@ -107,8 +156,14 @@ const App = () => {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="Xor">
+            {`xor-${xorVal}`}
+          </Section>
+          <Section title="Sha">
+            {`sha-${shaVal}`}
+          </Section>
+          <Section title="Multiply">
+            {`multiply-${multiply}`}
           </Section>
           <Section title="Debug">
             <DebugInstructions />
